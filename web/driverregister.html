@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title></title>
+	<script type="text/javascript">
+		function validate()
+		{
+			var a = document.forms[0].elements[1].value;
+			if (a.length!=12)
+			{
+				document.getElementById("a").innerHTML="<font color = red> 12 Digits are required";
+				return false;
+			}
+			var b = document.forms[0].elements[2].value;
+			if(b.length!=10)
+			{
+				document.getElementById("b").innerHTML="<font color = red>10 Digits required";
+				return false;
+			}
+			var c = document.forms[0].elements[5].value;
+			var d = document.forms[0].elements[6].value;
+			if (c.length<8) 
+			{
+				document.getElementById("c").innerHTML="<font color = red>Minimum 8 Digits required";
+				return false;
+			}
+			
+			if (d!=c)
+			{
+				document.getElementById("c").innerHTML="<font color = red>Password Does not Match";
+				return false;
+			}
+
+
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-image:url(bgbilding2.jpg) ;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body style="background-color:#000000;">
+	<h3 align="center"><font color="#99ccff" face="Times roman" size="16"><b>Driver Registration</b></font></h3>
+	
+<form action="driverR.jsp" onsubmit="return validate()" method="post">
+<br><br><br>
+	<div class="row">
+<div class="col-lg-1"></div>
+		<div class="col-lg-3">
+			<font color="#e6ccff">Fullname*</font>
+		</div		
+		  <div class="col-lg-1"></div>
+			
+		</div>
+		
+		<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-9">
+					<input type="text" name="txtfname" placeholder="Fullname" class="form-control" required>
+				
+				<div class="col-lg-1"></div>
+			</div>
+			<br><br>
+			<br><br><br>
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+				  <font color="#e6ccff">Aadhaar Number*</font>
+			</div>
+			<div class="col-lg-3">
+				  <font color="#e6ccff">Mobile Number*</font>
+			</div>
+			    <div class="col-lg-3">
+				  <font color="#e6ccff">Address*</font>
+			</div> 
+	</div>
+
+	<div class="row">
+		<div class="col-lg-1"></div>
+			<div class="col-lg-3">
+				<input type="text" name="txtaadhaar" placeholder="Enter Aadharcard number*" class="form-control" required>
+				<p id="a"></p>
+			</div>
+			<div class="col-lg-3">
+				<input type="text" name="txtnumber" placeholder="Enter Mobile number*" class="form-control" required>
+				<p id="b"></p>
+			</div>
+			<div class="col-lg-3">
+				<textarea type="text" name="txtaddress" placeholder="Address*" class="form-control" required></textarea>
+
+			</div>
+			<div class="col-lg-1"></div>
+		</div>
+		
+		<br><br><br>
+		<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+				  <font color="#e6ccff">Email*</font>
+			</div>
+			<div class="col-lg-3">
+				 <font color="#e6ccff">Password*</font>
+			</div>
+			    <div class="col-lg-3">
+				  <font color="#e6ccff">Confirm Password*</font>
+			</div> 
+			    <div class="col-lg-1">
+			    </div>
+		</div>
+		<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3">
+						<input type="email" name="txtemail" placeholder="Enter Email" class="form-control" required>
+					</div>
+				<div class="col-lg-3">
+						<input type="Password" name="txtpassword" placeholder="Enter Password" class="form-control"required>
+						<p id="c"></p>
+					</div>
+				<div class="col-lg-3">
+						<input type="Password" name="ConfirmPassword" placeholder="Confirm Password" class="form-control">
+						<p id="c"></p>
+					</div>
+				<div class="col-lg-1"></div>
+				    </div>
+				    
+				    <br><br><br>
+				<div class="row">
+					<div class="col-lg-1"></div>
+					<div class="col-lg-3">
+						<font color="#e6ccff">Payment Method*</font>
+					</div>
+					<div class="col-lg-3">
+						<font color="#e6ccff">Transaction-ID*</font>
+					</div>
+					<div class="col-lg-3">
+						<font color="#e6ccff">Fees*</font>
+					</div>
+				</div>
+		<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-3"><select name="txtpm" class="form-control">
+									  <option>Phonepe</option>
+									  <option>Gpay</option>
+								   	  <option>Paytm</option>
+								   	</select>
+				</div>
+				<div class="col-lg-3">
+					<input type="text" name="txttid" placeholder="Transcation-ID" class="form-control">
+				</div>
+				<div class="col-lg-3">
+					<input type="text" name="txtrc" value="500" class="form-control" readonly>
+				</div>
+			</div>
+			<br><br><br>
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-3"><font color="#e6ccff">License Number</font>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-3">
+                                <input type="text" name="lno" class="form-control" placeholder="Enter Number">
+                            </div>
+                        </div>
+			<div class="row"></div>
+                        <br><br><br>
+                        
+			<div class="row">
+				<div class="col-lg-5"></div>
+				<div class="col-lg-5">
+					<input type="submit" name="" class="btn btn-primary"> &nbsp;
+					<a href="home.html" class="btn btn-danger">Home</a>
+				</div>
+				<div class="col-lg-4"></div>
+				<div class="row"> </div>
+			
+		</div>
+		
+
+		      
+			
+		
+</body>
+</html>
